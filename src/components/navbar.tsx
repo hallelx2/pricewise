@@ -1,12 +1,20 @@
 import { Flame, Heart, HomeIcon, Search, User } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
+import React, { ElementType } from 'react'
 
-const navIcons = [
+// Define the type for the nav icons
+type NavIcon = {
+    Icon: ElementType;  // A React component type (like Lucide icons)
+    key: string;
+};
+
+// Define the array with types
+const navIcons: NavIcon[] = [
     { Icon: Search, key: "search" },
     { Icon: Heart, key: "heart" },
     { Icon: User, key: "user" },
-]
+];
+
 
 const Navbar = () => {
   return (
